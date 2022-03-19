@@ -43,7 +43,7 @@ main {
     height: 0px;
     flex-direction: column;
     border-bottom: 1px solid lightgray;
-    margin-bottom: 0.5em;
+    /* margin-bottom: 0.5em; */
     transition: height 0.3s;
     overflow-y: clip;
 }
