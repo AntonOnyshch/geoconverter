@@ -88,8 +88,8 @@ main {
     cursor: pointer;
     border: 1px solid lightgray;
     background-color: transparent;
-    
     margin: 2.8em 1em 1em 1em;
+    padding-top: .3em;
 }
 #cvt-btn:hover {
     background-color: whitesmoke;
