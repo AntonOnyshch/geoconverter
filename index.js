@@ -105,10 +105,10 @@ window.geoconverter = {
         settingsBtn.addEventListener('click', (e) => {
             if(cvtSettings.style.height === '0px' || cvtSettings.style.height === '') {
                 cvtSettings.style.height = '295px';
-                cvtSettings.style.opacity = 1;
+                cvtSettings.style.display = 'flex';
             } else {
                 cvtSettings.style.height = '0px';
-                cvtSettings.style.opacity = 0;
+                cvtSettings.style.display = 'none';
             }
         });
         document.getElementById('cvt-btn').addEventListener('click', (e) => {
