@@ -18,7 +18,7 @@ main {
     border-radius: 1em;
     padding: 0em 1em 1em 1em;
     margin-top: 1em;
-    min-width: 300px;
+    min-width: 310px;
 }
 #cvt-header {
     display: flex;
