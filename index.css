@@ -71,7 +71,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white; /*For iOS Safari. When turning settings off body is looking transparent*/
+    background-color: white;
 }
 
 #cvt-body section {
