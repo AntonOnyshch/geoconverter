@@ -19,7 +19,6 @@ main {
 #cvt-header {
     display: flex;
     justify-content: flex-end;
-    border-bottom: 1px solid lightgray;
     padding: .5em 0;
 }
 #settings-btn {
@@ -38,15 +37,12 @@ main {
     background-color: lightgray;
 }
 #cvt-settings {
-    display: none;
+    height: 0px;
     flex-direction: column;
     border-bottom: 1px solid lightgray;
     margin-bottom: 0.5em;
-    padding: .5em 0em;
-    transition: display 0.3s;
-}
-.show-settings {
-    display: flex;
+    transition: height 0.3s;
+    overflow-y: clip;
 }
 .ctv-ctn-title {
     color: #0088ff;
