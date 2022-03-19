@@ -41,9 +41,8 @@ main {
     background-color: lightgray;
 }
 #cvt-settings {
-    height: 0px;
+    display: none;
     flex-direction: column;
-    transition: height 0.3s;
     overflow-y: clip;
 }
 .ctv-ctn-title {

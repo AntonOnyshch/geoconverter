@@ -103,11 +103,9 @@ window.geoconverter = {
             }
         });
         settingsBtn.addEventListener('click', (e) => {
-            if(cvtSettings.style.height === '0px' || cvtSettings.style.height === '') {
-                cvtSettings.style.height = '295px';
+            if(cvtSettings.style.display === 'none' || cvtSettings.style.display === '') {
                 cvtSettings.style.display = 'flex';
             } else {
-                cvtSettings.style.height = '0px';
                 cvtSettings.style.display = 'none';
             }
         });
