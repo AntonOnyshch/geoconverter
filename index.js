@@ -103,10 +103,10 @@ window.geoconverter = {
             }
         });
         settingsBtn.addEventListener('click', (e) => {
-            if(cvtSettings.style.display === 'none' || cvtSettings.style.display === '') {
-                cvtSettings.style.display = 'flex';
+            if(cvtSettings.style.height === '0px' || cvtSettings.style.height === '') {
+                cvtSettings.style.height = '295px';
             } else {
-                cvtSettings.style.display = 'none';
+                cvtSettings.style.height = '0px';
             }
         });
         document.getElementById('cvt-btn').addEventListener('click', (e) => {

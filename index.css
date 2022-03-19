@@ -18,7 +18,6 @@ main {
     border-radius: 1em;
     padding: 0em 1em 1em 1em;
     margin-top: 1em;
-    min-width: 310px;
 }
 #cvt-header {
     display: flex;
@@ -41,9 +40,13 @@ main {
     background-color: lightgray;
 }
 #cvt-settings {
-    display: none;
+    height: 0px;
     flex-direction: column;
     overflow-y: clip;
+    transition: height 0.3s;
+}
+.title-wrapper {
+    background-color: white;
 }
 .ctv-ctn-title {
     color: #0088ff;
