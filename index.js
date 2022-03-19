@@ -189,3 +189,4 @@ window.geoconverter = {
 }
 
 window.geoconverter.init();
+window.geoconverter.onResize();
