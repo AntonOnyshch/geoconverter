@@ -68,26 +68,24 @@ window.geoconverter = {
     fromIndex: 0,
     toIndex: 0,
     converter: new WorldCoordsConverter(),
+    cvtBody: HTMLElement,
     init: function() {
-        const cvtBody = document.getElementById('cvt-body');
+        this.cvtBody = document.getElementById('cvt-body');
         const settingsBtn = document.getElementById('settings-btn');
         const cvtSettings = document.getElementById('cvt-settings');
         const selectFrom = document.getElementById('select-from');
         const selectTo = document.getElementById('select-to');
         const cvtBodyRawClass = 'cvt-body-raw';
         const cvtBodyRawReverseClass = 'cvt-body-raw-reverse';
+
         selectFrom.addEventListener('change', (e) => {
             this.fromIndex = e.target.selectedIndex;
             if(this.fromIndex === 0) {
                 selectTo.selectedIndex = 1;
-
-                cvtBody.classList.remove(cvtBodyRawReverseClass);
-                cvtBody.classList.add(cvtBodyRawClass);
+                this.onResize();
             } else {
                 selectTo.selectedIndex = 0;
-
-                cvtBody.classList.remove(cvtBodyRawClass);
-                cvtBody.classList.add(cvtBodyRawReverseClass);
+                this.onResize();
             }
         });
         selectTo.addEventListener('change', (e) => {
@@ -106,7 +104,7 @@ window.geoconverter = {
         });
         settingsBtn.addEventListener('click', (e) => {
             if(cvtSettings.style.height === '0px' || cvtSettings.style.height === '') {
-                cvtSettings.style.height = '250px';
+                cvtSettings.style.height = '265px';
             } else {
                 cvtSettings.style.height = '0px';
             }
@@ -172,6 +170,22 @@ window.geoconverter = {
 
         }
     },
+    onResize: function() {
+        const width = document.body.offsetWidth;
+        if(width > 500) {
+            if(this.fromIndex === 0) {
+                this.cvtBody.style.flexDirection = 'row';
+            } else {
+                this.cvtBody.style.flexDirection = 'row-reverse';
+            }
+        } else {
+            if(this.fromIndex === 0) {
+                this.cvtBody.style.flexDirection = 'column';
+            } else {
+                this.cvtBody.style.flexDirection = 'column-reverse';
+            }
+        }
+    }
 }
 
 window.geoconverter.init();

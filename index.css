@@ -4,7 +4,9 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--color-font);
 }
-
+body {
+    margin: 0px;
+}
 main {
     display: flex;
     justify-content: center;
@@ -15,6 +17,7 @@ main {
     border: 1px solid lightgray;
     border-radius: 1em;
     padding: 0em 1em 1em 1em;
+    margin-top: 1em;
 }
 #cvt-header {
     display: flex;
@@ -54,7 +57,7 @@ main {
     background-color: #f5f5f5ad;
     padding: 0.5em;
     border-radius: 0.5em;
-    margin: 0.1em;
+    margin: 0.2em 0em;
 }
 .settings-ctn p {
     margin-block-start: .1em;
@@ -67,6 +70,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white; /*For iOS Safari. When turning settings off body is looking transparent*/
 }
 
 #cvt-body section {
@@ -76,10 +80,20 @@ main {
     justify-content: center;
 }
 #cvt-btn {
-    border-radius: 50%;
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    background-color: transparent;
+    
     margin: 2.8em 1em 1em 1em;
+}
+#cvt-btn:hover {
+    background-color: whitesmoke;
+}
+#cvt-btn:active {
+    background-color: lightgray;
 }
 
 .cvt-body-raw {
@@ -88,10 +102,11 @@ main {
 .cvt-body-raw-reverse {
     flex-direction: row-reverse;
 }
+.cvt-body-column-reverse {
+    flex-direction: column-reverse;
+}
 @media (max-width: 500px) {
-    #cvt-body {
-        flex-direction: column;
-    }
+    
     #cvt-btn {
         margin: 1em 0em;
         transform: rotate(90deg)
