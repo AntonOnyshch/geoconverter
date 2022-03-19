@@ -104,7 +104,7 @@ window.geoconverter = {
         });
         settingsBtn.addEventListener('click', (e) => {
             if(cvtSettings.style.height === '0px' || cvtSettings.style.height === '') {
-                cvtSettings.style.height = '265px';
+                cvtSettings.style.height = '295px';
             } else {
                 cvtSettings.style.height = '0px';
             }
