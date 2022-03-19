@@ -52,6 +52,9 @@ main {
     font-weight: lighter;
     background-color: white;
 }
+.ctv-title-ctn {
+    background-color: white;
+}
 .settings-ctn {
     background-color: #f5f5f5ad;
     padding: 0.5em;
