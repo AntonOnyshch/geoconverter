@@ -125,13 +125,11 @@ window.geoconverter = {
             values[1] = parseFloat(geoInputs[3].value);
             values[2] = parseFloat(geoInputs[5].value);
             let ecefCoords;
-            // use degrees
+            
             if(useDegrees) {
-                const latD = values[0] * Math.PI / 180;
-                const lonD = values[1] * Math.PI / 180;
-                const alt = values[2];
-                ecefCoords =  this.converter.GeodeticToECEF(latD, lonD, alt);
-            } else { // use radians
+                ecefCoords =  this.converter.GeodeticToECEF(
+                    values[0] * Math.PI / 180, values[1] * Math.PI / 180, values[2]);
+            } else {
                 ecefCoords =  this.converter.GeodeticToECEF(values[0], values[1], values[2]);
             }
             if(useMeters) {
@@ -152,10 +150,8 @@ window.geoconverter = {
             if(useMeters) {
                 geodeticCoords = this.converter.ECEFToGeodetic(values[0], values[1], values[2]);
             } else {
-                const xKm = values[0] / 1000;
-                const yKm = values[1] / 1000;
-                const zKm = values[2] / 1000;
-                geodeticCoords = this.converter.ECEFToGeodetic(xKm, yKm, zKm);
+                geodeticCoords = this.converter.ECEFToGeodetic(
+                    values[0] * 1000, values[1] * 1000, values[2] * 1000);
             }
 
             if(useDegrees) {

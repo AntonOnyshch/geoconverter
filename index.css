@@ -21,8 +21,19 @@ main {
 }
 #cvt-header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: .5em 0;
+}
+#github-a {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+}
+#github-a:hover {
+    background-color: whitesmoke;
+}
+#github-a:active {
+    background-color: lightgray;
 }
 #settings-btn {
     width: 30px;
